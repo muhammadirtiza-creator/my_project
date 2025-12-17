@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+        <label for="password">password</label>
+        <input type="password" id="pass" name="pass">
+            <button type="button" onclick="saveData()">Save Data</button>
+
+    </form>
+    <script>
+function saveData() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", pass);
+
+    alert("Data saved to Local Storage successfully!");
+    console.log("Saved Data:", { name, email, pass });
+}
+</script>
+</body>
+
+</html>

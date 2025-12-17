@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login Form</h2>
+<form>
+    <label>Email</label>
+    <input type="email" id="loginEmail">
+
+    <label>Password</label>
+    <input type="password" id="loginPass">
+
+    <button type="button" onclick="login()">Login</button>
+</form>
+
+<script>
+function login() {
+    let email = document.getElementById("loginEmail").value;
+    let pass = document.getElementById("loginPass").value;
+
+    let storedEmail = localStorage.getItem("userEmail");
+    let storedPass = localStorage.getItem("userPassword");
+
+    if (email === storedEmail && pass === storedPass) {
+        alert("Login Successful!");
+        window.location.href = "welcome.html"; // go to welcome page
+    } else {
+        alert("Invalid Email or Password");
+    }
+}
+</script>
+
+</body>
+</html>

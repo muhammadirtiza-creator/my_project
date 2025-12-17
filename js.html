@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basics Demo</title>
+</head>
+
+<body>
+
+<button id="btnClick" onclick="showMessage">Click Me</button> <br>
+<button id="btnSave" onclick="savetolocal()">Save to Local Storage</button> <br>
+<button id="btnSession" onclick="savetosession()">Save to Session Storage</button> <br>
+
+<script>
+function showMessage() {
+    let name = prompt("Enter your name:");
+    alert("Hello " + name + "! Welcome!"); 
+    console.log("User entered name: " + name);
+}
+
+function savetolocal() {
+    localStorage.setItem("username", "Zain");
+    alert("Username saved in Local Storage!");
+}
+
+ function savetosession() {
+    sessionStorage.setItem("sessionData", "Active User");
+    alert("Data saved in Session Storage!");
+}
+</script>
+
+</body>
+</html>
